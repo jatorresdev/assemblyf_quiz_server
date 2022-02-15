@@ -16,23 +16,23 @@
       "type": "string",
       "required": true
     },
-    "answer_a": {
+    "answerA": {
       "type": "string",
       "required": true
     },
-    "answer_b": {
+    "answerB": {
       "type": "string",
       "required": true
     },
-    "answer_c": {
+    "answerC": {
       "type": "string",
       "required": true
     },
-    "answer_d": {
+    "answerD": {
       "type": "string",
       "required": true
     },
-    "answer_correct": {
+    "answerCorrect": {
       "type": "string",
       "required": true,
       "private": true
