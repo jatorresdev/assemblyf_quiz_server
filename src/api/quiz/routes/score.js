@@ -4,6 +4,9 @@ module.exports = {
             method: 'POST',
             path: '/quizzes/:id/score',
             handler: 'quiz.score',
+            config: {
+                policies: ['global::isAuthenticated']
+            }
         }
     ]
 }

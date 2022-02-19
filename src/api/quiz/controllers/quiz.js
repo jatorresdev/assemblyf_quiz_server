@@ -26,6 +26,7 @@ module.exports = createCoreController('api::quiz.quiz', ({ strapi }) => ({
 
             if (question) {
                 userAnswer.correct = false;
+                userAnswer.question = question.title;
 
                 if (question.answerCorrect === userAnswer.questionAnswer) {
                     userAnswer.correct = true;
