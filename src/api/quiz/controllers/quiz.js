@@ -40,6 +40,13 @@ module.exports = createCoreController('api::quiz.quiz', ({ strapi }) => ({
 
         delete quiz.questions;
 
-        return { quiz, answers, score, questionCount };
+        const newQuiz = {
+            id: quiz.id,
+        }
+
+        delete quiz.id;
+        newQuiz.attributes = quiz
+
+        return { quiz: newQuiz, answers, score, questionCount };
     },
 }));
