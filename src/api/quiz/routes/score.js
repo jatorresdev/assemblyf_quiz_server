@@ -5,7 +5,9 @@ module.exports = {
             path: '/quizzes/:id/score',
             handler: 'quiz.score',
             config: {
-                policies: ['global::isAuthenticated']
+                policies: [
+                    'global::is-authenticated',
+                ]
             }
         }
     ]
