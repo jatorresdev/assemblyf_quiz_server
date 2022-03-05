@@ -8,11 +8,11 @@ module.exports = ({ strapi }) => ({
     let score = 0;
 
     if (!quiz) {
-      return ctx.notFound()
+      return ctx.notFound();
     }
 
     if (Object.keys(userAnswers).length === 0) {
-      return ctx.badRequest('The request body is empty', userAnswers)
+      return ctx.badRequest('The request body is empty', userAnswers);
     }
 
     const answers = userAnswers.filter((userAnswer) => {
@@ -40,7 +40,7 @@ module.exports = ({ strapi }) => ({
     }
 
     delete quiz.id;
-    newQuiz.attributes = quiz
+    newQuiz.attributes = quiz;
 
     return { quiz: newQuiz, answers, score, questionCount };
   },
